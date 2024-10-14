@@ -9,5 +9,13 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
+}
 
+@RestController
+class Demo{
+	@GetMapping("/hello")
+	public String home()
+	{
+		return "Hello from Render...";
+	}
 }
